@@ -1,0 +1,9 @@
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+core.autocrlf=true
+http.postbuffer=524288000
+http.version=HTTP/1.1
+user.name=Mahmoud Mokhtar
+user.email=mahmoudmokhtar2001@gmail.com
