@@ -1,8 +1,7 @@
 # Manager
 
-Manager is an innovative and highly secure application designed to offer an advanced level of protection for your personal items, files, and sensitive data. This app ensures that your digital information remains safe and locked until your identity is verified through biometric authentication, either using your fingerprint or facial recognition. By utilizing these cutting-edge security features, BioLock provides an extra layer of protection, preventing unauthorized access and ensuring that only you have the ability to unlock and interact with your device.
+This app is specifically designed for business owners in the sports sector, providing a comprehensive platform for managing various aspects of their business. It allows users to efficiently manage products, handle sales, and promote their business through ads and Reels videos. The app ensures a secure environment with account verification to build trust, and offers robust tools for order management, enabling businesses to track their sales and operations seamlessly. Furthermore, the app allows users to monitor their earnings and securely withdraw funds, ensuring smooth and secure financial transactions every time. This solution is perfect for gym owners, sports academies, field managers, and sports store owners looking to streamline their business operations in a digital space.
 
-What makes BioLock stand out is its seamless integration of biometric technology, which not only makes accessing your information faster and more convenient but also enhances the overall security of your device. With just a touch of your finger or a glance at your face, you can instantly unlock your app and gain access to your private data, all while ensuring it is protected from any unauthorized users.
 ## Getting Started
 
 This project is a starting point for a Flutter application.   
