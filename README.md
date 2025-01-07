@@ -15,4 +15,4 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
-![cybersecurity-concept-illustration](https://github.com/user-attachments/assets/dfb6d583-373c-4cbe-992a-81e446d02883)
+![Mobile App Screen Mockup, Floating](https://github.com/user-attachments/assets/4f6bcdaf-42eb-45f1-b60d-2e96d922c570)
