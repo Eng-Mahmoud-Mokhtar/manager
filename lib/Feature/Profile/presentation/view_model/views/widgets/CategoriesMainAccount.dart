@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:manager/Feature/MyWallet/presentation/view_model/views/MyWallet.dart';
+import 'package:manager/Feature/profits/presentation/view_model/views/profits.dart';
 import '../../../../../Call/presentation/view_model/views/callus.dart';
 import '../../../../../ChangePassword/presentation/view_model/views/ChangePass.dart';
-import '../../../../../Location/presentation/view_model/views/LocationScreen.dart';
+import '../../../../../EditProfile/presentation/view_model/views/widgets/PrivteProfile.dart';
 import '../../../../../MyOrders/presentation/view_model/views/OrderHome.dart';
-import '../../../../../Points/presentation/view_model/views/widgets/Points.dart';
-import '../../../../../Condition/presentation/view_model/views/widgets/Conditions_terms.dart';
 import '../../../../../PrivacePolicie/presentation/view_model/views/widgets/PrivacyPolicy.dart';
 import '../../../../../LogOut/presentation/view_model/views/widgets/logOut.dart';
 import '../../../../../ShareWith/presentation/view_model/views/widgets/shareWithFrindes.dart';
@@ -14,19 +14,24 @@ import '../../../../../core/utiles/constans.dart';
 Widget buildOrderContainer(Map<String, dynamic> order, BuildContext context) {
   return GestureDetector(
     onTap: () {
-      if (order['name'] == 'طلباتك') {
+      if (order['name'] == 'الحجوزات') {
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => OrderHome(),
         ));
-      } else if (order['name'] == 'عنونك') {
+      }
+      else if (order['name'] == 'الملف الشخصي') {
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => LocationScreen(),
+          builder: (context) =>MyPrivateAccount(userName: 'Mahmoud', email: 'Mahmoud@gmail.com', phoneNumber: '01017900067',),
         ));
-      } else if (order['name'] == 'ادعوا أصدقائك') {
-        ShareBottomSheet().show(context);
-      } else if (order['name'] == 'النقاط') {
+      }else if (order['name'] == 'الارباح') {
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => Points(),
+          builder: (context) =>Profits(),
+        ));
+      }else if (order['name'] == 'ادعوا أصدقائك') {
+        ShareBottomSheet().show(context);
+      } else if (order['name'] == 'المحفظة') {
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => MyWallet(),
         ));
       } else if (order['name'] == 'غير كلمة السر') {
         Navigator.of(context).push(MaterialPageRoute(
@@ -39,10 +44,6 @@ Widget buildOrderContainer(Map<String, dynamic> order, BuildContext context) {
       } else if (order['name'] == 'اتصل بنا') {
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => Callus(),
-        ));
-      }else if (order['name'] == 'البنود والظروف') {
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => Conditions(),
         ));
       }else if (order['name'] == 'سياسة الخصوصية') {
         Navigator.of(context).push(MaterialPageRoute(

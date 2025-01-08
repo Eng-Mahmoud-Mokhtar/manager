@@ -37,29 +37,13 @@ dependencies:
   cupertino_icons:
   smooth_page_indicator:
   dotted_border:
-  step_progress_indicator:
-  table_calendar:
   flutter_screenutil:
-  carousel_slider:
   share:
-  clipboard:
   intl: any
-  permission_handler:
   flutter_document_picker:
   image_picker:
-  file_picker:
-  open_file:
-  firebase_storage:
-  path_provider: ^2.0.2
-  path:
-  chat_bubbles: ^1.5.0
-  shared_preferences:
-  provider:
-  flutter_xlider:
-  simple_ripple_animation:
   flutter_spinkit:
-  video_player:
-  flutter_bloc:
+  fl_chart: ^0.40.0
   flutter_launcher_icons:
 flutter_launcher_icons:
   android: true

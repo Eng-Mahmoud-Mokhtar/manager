@@ -4,6 +4,8 @@ import 'dart:io';
 
 import 'package:image_picker/image_picker.dart';
 
+import '../../../../../core/utiles/constans.dart';
+
 class DetailsCallus extends StatefulWidget {
   final String text;
   final Image? image;
@@ -27,9 +29,7 @@ class _DetailsCallusState extends State<DetailsCallus> {
     final screenWidth = mediaQuery.size.width;
 
     final containerWidth = screenWidth * 0.9;
-    final containerHeight = _selectedImage == null
-        ? containerWidth / 3
-        : containerWidth;
+    final containerHeight = _selectedImage == null ? containerWidth / 3 : containerWidth;
 
     final textSize = screenWidth * 0.04;
 
@@ -49,7 +49,7 @@ class _DetailsCallusState extends State<DetailsCallus> {
             ),
           ],
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 10),
         GestureDetector(
           onTap: () async {
             final ImagePicker picker = ImagePicker();
@@ -66,8 +66,8 @@ class _DetailsCallusState extends State<DetailsCallus> {
             height: containerHeight,
             child: DottedBorder(
               borderType: BorderType.RRect,
-              strokeWidth: 1.0,
-              color: Colors.white24,
+              strokeWidth: 1.5,
+              color: KprimaryColor,
               dashPattern: const [10, 10],
               radius: const Radius.circular(8),
               child: Container(
@@ -75,7 +75,7 @@ class _DetailsCallusState extends State<DetailsCallus> {
                 height: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: const Color(0x1c302f2d),
+                  color: Color.fromRGBO(50, 50, 50, 2), // درجة رمادية أفتح
                 ),
                 child: Center(
                   child: _selectedImage != null
@@ -91,12 +91,17 @@ class _DetailsCallusState extends State<DetailsCallus> {
                       : Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset('images/upload.png'),
+                      Icon(
+                        Icons.cloud_upload_outlined,
+                        color: KprimaryColor,
+                        size: textSize * 2, // حجم الأيقونة
+                      ),
+                      const SizedBox(height: 8),
                       Text(
-                        'ارفق صورة',
+                        'اضغط هنا لاضافة الصورة',
                         style: TextStyle(
-                          color: Colors.white24,
-                          fontSize: textSize * 0.6,
+                          color: Colors.white54,
+                          fontSize: textSize * 0.8,
                         ),
                       ),
                     ],

@@ -43,7 +43,7 @@ class _MyPrivateAccountState extends State<MyPrivateAccount> {
               ),
               child: ClipOval(
                 child: Image.asset(
-                  'assets/images/Vector 3.png',
+                  'lib/Assets/images/photo_2024-12-23_04-00-11.jpg',
                   fit: BoxFit.cover,
                 ),
               ),

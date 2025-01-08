@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import '../../../../../../core/appbar_widget.dart';
 import '../../../../../core/utiles/constans.dart';
 import 'UploudDetailsVerification.dart';
 import 'confirmation.dart';
@@ -20,24 +21,12 @@ class _DetailesVerifiState extends State<DetailesVerifi> {
     final double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_forward_sharp, color: Colors.white),
-          ),
-        ],
-        backgroundColor: const Color(0xff302F2D),
-        title: const Text(
-          'طلب التوثيق',
-          style: TextStyle(color: Colors.white),
-        ),
-        centerTitle: true,
-      ),
-      backgroundColor: Colors.black,
+      appBar: appBarContent(
+        title: "طلب التوثيق",
+        onTap: () {
+          Navigator.pop(context);
+        },
+      ),      backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(screenWidth * 0.05),
@@ -246,14 +235,13 @@ class _DetailesVerifiState extends State<DetailesVerifi> {
                 ),
               ),
               SizedBox(height: screenHeight * 0.03),
-              UploudDetailsVerification(
+              UploadDetailsVerification(
                 text: 'صورة البطاقة الشخصية',
                 image: _selectedImage != null
                     ? Image.file(File(_selectedImage!.path))
                     : null,
               ),
               SizedBox(height: screenHeight * 0.03),
-        
               Container(
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height * 0.08,

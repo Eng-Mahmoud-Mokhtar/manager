@@ -80,7 +80,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
           padding: EdgeInsets.all(10),
           child: ClipOval(
             child: Image.asset(
-              'lib/Assets/images/photo_2024-12-23_04-00-11.jpg',
+              'lib/Assets/images/startup_6857487.png',
               width: 35,
               height: 35,
               fit: BoxFit.contain,

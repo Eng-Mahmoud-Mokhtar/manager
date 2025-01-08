@@ -30,16 +30,17 @@ class Callus extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(
-                'الايميل',
+                'رقم الهاتف',
                 style: TextStyle(
                   fontSize: screenWidth * 0.04,
                   color: Colors.white,
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Container(
+                  height: screenWidth * 0.12,
                   child: TextField(
                     style: TextStyle(
                       fontSize: screenWidth * 0.03,
@@ -50,7 +51,7 @@ class Callus extends StatelessWidget {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Color.fromRGBO(50, 50, 50, 2),
-                      hintText: 'اكتب الايميل الخاص بك',
+                      hintText: '0123456789',
                       hintStyle: TextStyle(
                         color: Colors.grey,
                         fontSize: screenWidth * 0.03,
@@ -62,9 +63,9 @@ class Callus extends StatelessWidget {
                       suffixIcon: Padding(
                         padding: const EdgeInsets.only(right: 15, left: 5),
                         child: Icon(
-                          Icons.email_outlined,
+                          Icons.phone_enabled_sharp,
                           color: Colors.white70,
-                          size: 27,
+                          size: 25,
                         ),
                       ),
                       focusedBorder: OutlineInputBorder(
@@ -79,7 +80,7 @@ class Callus extends StatelessWidget {
                 text: 'ارفق صوره الشكوي',
                 image: _selectedImage != null ? Image.file(File(_selectedImage!.path)) : null, // عرض الصورة المختارة
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               Text(
                 'اكتب سبب الشكوي',
                 style: TextStyle(
@@ -91,24 +92,22 @@ class Callus extends StatelessWidget {
               SizedBox(height: 10),
               Container(
                 width: screenWidth,
-                height: screenWidth * 0.4, // ارتفاع ثابت يتناسب مع عرض الشاشة
-                padding: EdgeInsets.all(10),
+                height: screenWidth * 0.3,
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
                   color: Color.fromRGBO(50, 50, 50, 2),
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: KprimaryColor),
                 ),
                 child: Scrollbar(
                   child: SingleChildScrollView(
                     child: TextField(
                       controller: complaintController,
-                      maxLines: null, // للسماح بعدد غير محدود من الأسطر
                       style: TextStyle(
-                        fontSize: screenWidth * 0.04,
+                        fontSize: screenWidth * 0.035,
                         color: Colors.white,
                       ),
                       decoration: InputDecoration(
-                        border: InputBorder.none, // إخفاء الإطار الافتراضي
+                        border: InputBorder.none,
                         hintText: 'اكتب',
                         hintStyle: TextStyle(color: Colors.grey),
                       ),

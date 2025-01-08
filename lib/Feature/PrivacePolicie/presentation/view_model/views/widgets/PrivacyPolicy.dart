@@ -24,17 +24,15 @@ class PrivacyPolicy extends StatelessWidget {
           padding: EdgeInsets.all(screenWidth * 0.04),
           child: Column(
             children: [
-              ClipOval(
-                child: Container(
-                  color: Color(0xff36363e), // اللون الرمادي للحاوية
-                  child: Image.asset(
-                    'assets/images/policy.png', // الصورة
-                    width: 70, // عرض الدائرة
-                  ),
-                ),
+              SizedBox(
+                height: screenHeight * 0.04, // 2% من ارتفاع الشاشة
+              ),
+              Image.asset(
+                'lib/Assets/images/logo.png', // الصورة
+                width: 70, // عرض الدائرة
               ),
               SizedBox(
-                height: screenHeight * 0.02, // 2% من ارتفاع الشاشة
+                height: screenHeight * 0.04, // 2% من ارتفاع الشاشة
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end, // محاذاة النص لليمين

@@ -21,7 +21,6 @@ class _MyAccountState extends State<MyAccount> {
       {'name': 'الملف الشخصي', 'image': 'lib/Assets/images/2121.png'},
       {'name': 'توثيق الحساب', 'image': 'lib/Assets/images/01.png'},
       {'name': 'الحجوزات', 'image': 'lib/Assets/images/Group 1000004366.png'},
-      {'name': 'عنونك', 'image': 'lib/Assets/images/Group 1000004357 (1).png'},
       {'name': 'ادعوا أصدقائك', 'image': 'lib/Assets/images/Group 1000004357.png'},
       {'name': 'المحفظة', 'image': 'lib/Assets/images/333333.png'},
       {'name': 'الارباح', 'image': 'lib/Assets/images/5454.png'},

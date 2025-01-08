@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:manager/Feature/profits/presentation/view_model/views/profits.dart';
+
+import '../../../../../MyOrders/presentation/view_model/views/OrderHome.dart';
+import '../../../../../Verification/presentation/view_model/views/AccountVervification.dart';
 
 class Categories extends StatelessWidget {
   const Categories({Key? key}) : super(key: key);
@@ -67,7 +71,7 @@ class Categories extends StatelessWidget {
                   () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => VerifyAccountPage(),
+                  builder: (context) => AccountVerification(),
                 ),
               ),
             ),
@@ -80,7 +84,7 @@ class Categories extends StatelessWidget {
                   () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ManageOrdersPage(),
+                  builder: (context) => OrderHome(),
                 ),
               ),
             ),
@@ -93,7 +97,7 @@ class Categories extends StatelessWidget {
                   () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => WalletPage(),
+                  builder: (context) => Profits(),
                 ),
               ),
             ),
@@ -173,30 +177,6 @@ class PromotedAdPage extends StatelessWidget {
 }
 class ManageAdsPage extends StatelessWidget {
   const ManageAdsPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
-  }
-}
-class VerifyAccountPage extends StatelessWidget {
-  const VerifyAccountPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
-  }
-}
-class ManageOrdersPage extends StatelessWidget {
-  const ManageOrdersPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
-  }
-}
-class WalletPage extends StatelessWidget {
-  const WalletPage({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -3,21 +3,23 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
-class UploudDetailsVerification extends StatefulWidget {
+import 'package:manager/Feature/core/utiles/constans.dart';
+
+class UploadDetailsVerification extends StatefulWidget {
   final String text;
   final Image? image;
 
-  const UploudDetailsVerification({
+  const UploadDetailsVerification({
     super.key,
     required this.text,
     this.image,
   });
 
   @override
-  State<UploudDetailsVerification> createState() => _UploudDetailsVerificationState();
+  State<UploadDetailsVerification> createState() => _UploadDetailsVerificationState();
 }
 
-class _UploudDetailsVerificationState extends State<UploudDetailsVerification> {
+class _UploadDetailsVerificationState extends State<UploadDetailsVerification> {
   XFile? _selectedImage;
 
   @override
@@ -26,9 +28,7 @@ class _UploudDetailsVerificationState extends State<UploudDetailsVerification> {
     final screenWidth = mediaQuery.size.width;
 
     final containerWidth = screenWidth * 0.9;
-    final containerHeight = _selectedImage == null
-        ? containerWidth / 3
-        : containerWidth;
+    final containerHeight = _selectedImage == null ? containerWidth / 3 : containerWidth;
 
     final textSize = screenWidth * 0.04;
 
@@ -48,7 +48,7 @@ class _UploudDetailsVerificationState extends State<UploudDetailsVerification> {
             ),
           ],
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         GestureDetector(
           onTap: () async {
             final ImagePicker picker = ImagePicker();
@@ -65,8 +65,8 @@ class _UploudDetailsVerificationState extends State<UploudDetailsVerification> {
             height: containerHeight,
             child: DottedBorder(
               borderType: BorderType.RRect,
-              strokeWidth: 1.0,
-              color: Colors.white24,
+              strokeWidth: 1.5,
+              color: KprimaryColor,
               dashPattern: const [10, 10],
               radius: const Radius.circular(8),
               child: Container(
@@ -74,7 +74,7 @@ class _UploudDetailsVerificationState extends State<UploudDetailsVerification> {
                 height: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: const Color(0x1c302f2d),
+                  color: Color.fromRGBO(50, 50, 50, 2), // درجة رمادية أفتح
                 ),
                 child: Center(
                   child: _selectedImage != null
@@ -90,12 +90,17 @@ class _UploudDetailsVerificationState extends State<UploudDetailsVerification> {
                       : Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset('images/upload.png'),
+                      Icon(
+                        Icons.cloud_upload_outlined,
+                        color: KprimaryColor,
+                        size: textSize * 2, // حجم الأيقونة
+                      ),
+                      const SizedBox(height: 8),
                       Text(
-                        'اضغط هنا لاضافة الصورة ',
+                        'اضغط هنا لاضافة الصورة',
                         style: TextStyle(
-                          color: Colors.white24,
-                          fontSize: textSize * 0.6,
+                          color: Colors.white54,
+                          fontSize: textSize * 0.8,
                         ),
                       ),
                     ],

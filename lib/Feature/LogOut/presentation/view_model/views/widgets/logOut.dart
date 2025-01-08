@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../../../core/colors.dart';
 import '../../../../../core/utiles/constans.dart';
 import '../../../../../login/presentation/view_model/views/LoginPage.dart';
 
@@ -28,32 +29,21 @@ class LogoutAlertDialog {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
-          backgroundColor: Color.fromRGBO(67, 71, 67, 1),
+          backgroundColor: ColorManager.appBarColor,
           content: Container(
             width: screenWidth * 0.6,
             height: (screenWidth * 0.9) * 0.6,
             child: Column(
               children: [
-                Center(
-                  child: Container(
-                    child: Icon(
-                      Icons.login_outlined,
-                      color: Colors.white,
-                      size: screenWidth * 0.06,
-                    ),
-                    height: screenWidth * 0.12,
-                    width: screenHeight * 0.12,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0xFF5C6959),
-                    ),
-                  ),
+                Spacer(),
+                Icon(
+                    Icons.login_outlined,
+                    color: Colors.white,
+                    size: screenWidth * 0.1,
                 ),
-                SizedBox(
-                  height: screenHeight * 0.02,
-                ),
+                Spacer(),
                 Text(
-                  'هل أنت متأكد من تسجيل الخروج من التطبيق؟',
+                  'هل تريد تسجيل الخروج من التطبيق؟',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontWeight: FontWeight.w400,
@@ -74,29 +64,25 @@ class LogoutAlertDialog {
                           'الغاء',
                           style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            fontSize: screenWidth * 0.04,  // حجم النص في الزر
-                            color: KprimaryColor,
+                            color: Colors.white,
                           ),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      width: screenWidth * 0.05,  // مسافة بين الزرارين
                     ),
                     GestureDetector(
                       onTap: () {
                         signOut(context);
                       },
                       child: Container(
-                        height: screenHeight * 0.09,
+                        height: screenWidth * 0.12,
                         width: screenWidth * 0.3,
                         decoration: BoxDecoration(
-                          color: KprimaryColor,
+                          color: Colors.red.shade500,
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Center(
                           child: Text(
-                            'تسجيل الخروج',
+                            'نعم',
                             style: TextStyle(
                               fontSize: screenWidth * 0.04,
                               color: Colors.white,

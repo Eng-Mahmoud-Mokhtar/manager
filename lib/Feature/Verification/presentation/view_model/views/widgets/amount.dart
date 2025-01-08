@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import '../../../../../../core/appbar_widget.dart';
 import 'Button.dart';
 import 'UploudDetailsVerification.dart';
 
@@ -20,29 +21,17 @@ class _AttachTransferVerificationState extends State<AttachTransferVerification>
     final double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_forward_sharp, color: Colors.white),
-          ),
-        ],
-        backgroundColor: const Color(0xff302F2D),
-        title: const Text(
-          'ارفاق تحويل المبلغ',
-          style: TextStyle(color: Colors.white),
-        ),
-        centerTitle: true,
-      ),
-      backgroundColor: Colors.black,
+      appBar: appBarContent(
+        title: "ارفاق تحويل المبلغ",
+        onTap: () {
+          Navigator.pop(context);
+        },
+      ),      backgroundColor: Colors.black,
       body: Padding(
         padding: EdgeInsets.all(screenWidth * 0.02),
         child: Column(
           children: [
-            UploudDetailsVerification(
+            UploadDetailsVerification(
               text: 'قم بارفاق صورة تحويل المبلغ',
               image: _selectedImage != null ? Image.file(File(_selectedImage!.path)) : null, // عرض الصورة المختارة
             ),
